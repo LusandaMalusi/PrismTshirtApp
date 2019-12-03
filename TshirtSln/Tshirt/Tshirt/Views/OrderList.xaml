@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Tshirt.Views.OrderList">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView Margin="20" ItemsSource="{Binding Orders}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="10" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <Label Text="Your Order" FontSize="Large" TextColor="Aqua"/>
+                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                <Label Text="{Binding Surname}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                                <Label Text="{Binding Gender}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                <Label Text="{Binding Shippingadress}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                                <Label Text="{Binding Datetime}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                <Label Text="{Binding Tshirtsize}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                                <Label Text="{Binding Tshirtcolor}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                                <Label  Text="{Binding AddressPosition}" />
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Confirm Order" Command="{Binding ConfirmCommand}">
+
+            </Button>
+            <Button Text="Shipping Address" Command="{Binding AddressCommand}">
+
+            </Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

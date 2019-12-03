@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tshirt.Views.MainPage"
+             Title="{Binding Title}"
+              BackgroundImage="">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Vinqi's Tshirt" 
+           HorizontalOptions="Center"
+           TextColor="Aqua"
+           FontSize="50"
+           FontAttributes="None"
+           VerticalOptions="Center" />
+
+        <Label Text="Pregnant or not we've got you"
+               FontSize="25"
+               TextColor="Aqua"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+    <Button Text="Place order" Command="{Binding PlaceOrderCommand}"
+                Font="Large"
+                BorderWidth="1"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"/>
+
+
+    <Button Text="View Order" Command="{Binding ViewOrderCommand}"
+                    Font="Large"
+                    BorderWidth="1"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"/>
+
+
+    </StackLayout>
+
+</ContentPage>

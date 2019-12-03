@@ -1,0 +1,12 @@
+C:\Users\Lusanda\source\repos\TshirtSln\Tshirt\Tshirt\bin\Debug\netstandard2.0\Tshirt.deps.json
+C:\Users\Lusanda\source\repos\TshirtSln\Tshirt\Tshirt\bin\Debug\netstandard2.0\Tshirt.dll
+C:\Users\Lusanda\source\repos\TshirtSln\Tshirt\Tshirt\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Lusanda\source\repos\TshirtSln\Tshirt\Tshirt\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\Lusanda\source\repos\TshirtSln\Tshirt\Tshirt\obj\Debug\netstandard2.0\Tshirt.AssemblyInfoInputs.cache
+C:\Users\Lusanda\source\repos\TshirtSln\Tshirt\Tshirt\obj\Debug\netstandard2.0\Tshirt.AssemblyInfo.cs
+C:\Users\Lusanda\source\repos\TshirtSln\Tshirt\Tshirt\obj\Debug\netstandard2.0\Views\OrderList.xaml.g.cs
+C:\Users\Lusanda\source\repos\TshirtSln\Tshirt\Tshirt\obj\Debug\netstandard2.0\Views\PlaceOrder.xaml.g.cs
+C:\Users\Lusanda\source\repos\TshirtSln\Tshirt\Tshirt\obj\Debug\netstandard2.0\Tshirt.dll
+C:\Users\Lusanda\source\repos\TshirtSln\Tshirt\Tshirt\obj\Debug\netstandard2.0\Tshirt.pdb
+C:\Users\Lusanda\source\repos\TshirtSln\Tshirt\Tshirt\bin\Debug\netstandard2.0\Tshirt.pdb
+C:\Users\Lusanda\source\repos\TshirtSln\Tshirt\Tshirt\obj\Debug\netstandard2.0\XamlC.stamp
