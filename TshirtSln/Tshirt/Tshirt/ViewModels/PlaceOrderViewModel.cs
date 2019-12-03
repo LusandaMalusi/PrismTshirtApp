@@ -47,7 +47,7 @@ namespace Tshirt.ViewModels
         public async override void Initialize(INavigationParameters parameters)
         {
             base.OnNavigatedFrom(parameters);
-           // var tshirtProperties = await _database.GetItemsAsync();
+            var tshirtProperties = await _database.GetItemsAsync();
             TshirtOrder = new TshirtProperties();
         }
 

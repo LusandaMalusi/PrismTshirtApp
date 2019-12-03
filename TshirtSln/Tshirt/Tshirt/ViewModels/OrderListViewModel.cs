@@ -63,9 +63,9 @@ namespace Tshirt.ViewModels
             var stuff = new TshirtDatabase();
             var unsubmitted = await stuff.GetUnSubmittedOrders();
 
-            var tshirts = await _database.GetItemsAsync();
-            Orders = new ObservableCollection<TshirtProperties>(tshirts);
-            var MyServerOrders = Orders.Select(x => new TshirtProperties()
+            //var tshirts = await _database.GetItemsAsync();
+            //Orders = new ObservableCollection<TshirtProperties>(tshirts);
+            var MyServerOrders = unsubmitted.Select(x => new TshirtProperties()
             {
                 Name = x.Name,
                 Gender = x.Gender,
@@ -78,19 +78,29 @@ namespace Tshirt.ViewModels
             var client = new HttpClient();
             var url = "http://10.0.2.2:5000/Products";
             var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
-            var response = await client.PostAsync(url, content);
-            await _dialogService.DisplayAlertAsync("Response Message", response.ReasonPhrase, "ok");
+            try
+            {
+                var response = await client.PostAsync(url, content);
+                await _dialogService.DisplayAlertAsync("Response Message", response.ReasonPhrase, "ok");
+                for (int i = 0; i < Orders.Count; i++)
+                {
+                    Orders[i].Posted = true;
+                    await databaseContent.SaveItemAsync(Orders[i]);
+                }
+            }
+            catch (Exception ex)
+            {
+                await _dialogService.DisplayAlertAsync("Exception", ex.Message, "ok");
+            }
         }
 
+           public async override void Initialize(INavigationParameters parameters)
+           {
+            base.OnNavigatedFrom(parameters);
 
-
-                public async override void Initialize(INavigationParameters parameters)
-                 {
-                  base.OnNavigatedFrom(parameters);
-
-                  Orders = new ObservableCollection<TshirtProperties>(await _database.GetItemsAsync());
-                 }
-
-    
+            Orders = new ObservableCollection<TshirtProperties>(await _database.GetItemsAsync());
+           }
     }
+    
+    
 }
